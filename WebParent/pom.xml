@@ -38,5 +38,6 @@
 
   <modules>
     <module>BackEnd</module>
+    <module>FrontEnd</module>
   </modules>
 </project>
