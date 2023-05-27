@@ -42,9 +42,14 @@
 
 
 
-<!--    <modules>-->
+    <modules>
+      <module>Common</module>
+      <module>WebParent</module>
+<!--      <module>introduction</module>-->
+<!--      <module>introduction</module>-->
+<!--      <module>introduction</module>-->
 <!--      <module>introduction</module>-->
 
-<!--    </modules>-->
+    </modules>
 
 </project>
