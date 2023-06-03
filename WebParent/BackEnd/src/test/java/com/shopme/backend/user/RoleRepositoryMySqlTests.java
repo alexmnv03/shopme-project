@@ -16,13 +16,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
+// Это пример теста, если мы хотим работать с основной БД, после того как мы добавилии зависимость
+//h2database этот клас стал не нужен. Оставим его просто как пример
 @DataJpaTest
 // Если мы хотим тестить с реальной БД
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 // Если не хотим откатить транзакции, иначе транзакция будет откачена будет
 @Rollback(false)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class RoleRepositoryTests {
+public class RoleRepositoryMySqlTests {
 
     private final static String ROLE_ADMIN = "Admin_test";
     private final static String ROLE_SALE = "Salesperson_test";
