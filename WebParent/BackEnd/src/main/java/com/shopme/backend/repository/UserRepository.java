@@ -13,12 +13,12 @@ import org.springframework.stereotype.Repository;
 import com.shopme.common.entity.User;
 
 @Repository
-public interface UserRepository extends SearchRepository<User, Integer> {
+public interface UserRepository extends SearchRepository<User, Long> {
 
 	@Query("SELECT u FROM User u WHERE u.email = :email")
 	public User getUserByEmail(@Param("email") String email);
 	
-	public Long countById(Integer id);
+	public Long countById(Long id);
 	
 	@Query("UPDATE User u SET u.enabled = ?2 WHERE u.id = ?1")
 	@Modifying
