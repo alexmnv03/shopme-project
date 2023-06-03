@@ -7,6 +7,7 @@
     <groupId>com.shopme</groupId>
     <artifactId>WebParent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+<!--    <relativePath>../</relativePath>-->
   </parent>
   <artifactId>BackEnd</artifactId>
   <version>0.0.1-SNAPSHOT</version>

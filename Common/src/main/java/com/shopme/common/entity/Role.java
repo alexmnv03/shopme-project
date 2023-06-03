@@ -31,7 +31,7 @@ public class Role extends IdBasedEntity implements Serializable{
 	@Column(length = 150, nullable = false)
 	private String description;
 	
-	public Role(Integer id) {
+	public Role(Long id) {
 		this.id = id;
 	}
 
