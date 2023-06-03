@@ -17,7 +17,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 
 // Это пример теста, если мы хотим работать с основной БД, после того как мы добавилии зависимость
-//h2database этот клас стал не нужен. Оставим его просто как пример
+//h2database этот клас стал не нужен. Оставим его просто как пример, а тесты отключим, чтобы они не
+// засоряли основную БД
 @DataJpaTest
 // Если мы хотим тестить с реальной БД
 @AutoConfigureTestDatabase(replace = Replace.NONE)
@@ -35,7 +36,7 @@ public class RoleRepositoryMySqlTests {
 	@Autowired
 	private RoleRepository repo;
 
-    @BeforeAll
+//    @BeforeAll
     public void deleteAllRoles() {
         deleteRole(ROLE_ADMIN);
         deleteRole(ROLE_SALE);
@@ -50,7 +51,7 @@ public class RoleRepositoryMySqlTests {
     }
 
 
-	@Test
+//	@Test
 	public void testCreateFirstRole() {
 
 		Role roleAdmin = new Role(ROLE_ADMIN, "manage everything");
@@ -59,7 +60,7 @@ public class RoleRepositoryMySqlTests {
 		assertThat(savedRole.getId()).isGreaterThan(0);
 	}
 	
-	@Test
+//	@Test
 	public void testCreateRestRoles() {
 		Role roleSalesperson = new Role(ROLE_SALE, "manage product price, "
 				+ "customers, shipping, orders and sales report");
