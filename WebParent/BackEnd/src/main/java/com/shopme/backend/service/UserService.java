@@ -1,12 +1,13 @@
 package com.shopme.backend.service;
 
+import com.shopme.backend.error.UserNotFoundException;
 import com.shopme.backend.paging.PagingAndSortingHelper;
 import com.shopme.common.entity.Role;
 import com.shopme.common.entity.User;
 
 import java.util.List;
 
-public class UserService {
+public interface UserService {
 
     public List<User> listAll();
 
