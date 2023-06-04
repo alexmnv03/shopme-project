@@ -22,7 +22,7 @@ public interface UserRepository extends SearchRepository<User, Long> {
 	
 	@Query("UPDATE User u SET u.enabled = ?2 WHERE u.id = ?1")
 	@Modifying
-	public void updateEnabledStatus(Integer id, boolean enabled);
+	public void updateEnabledStatus(Long id, boolean enabled);
 	
 	@Query("SELECT u FROM User u WHERE CONCAT(u.id, ' ', u.email, ' ', u.firstName, ' ',"
 			+ " u.lastName) LIKE %?1%")
