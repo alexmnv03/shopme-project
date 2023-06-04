@@ -64,7 +64,7 @@ public class PagingAndSortingHelper {
 		
 	}
 
-	public void listEntities(int pageNum, int pageSize, SearchRepository<?, Integer> repo) {
+	public void listEntities(int pageNum, int pageSize, SearchRepository<?, Long> repo) {
 		
 		LOGGER.info("PagingAndSortingHelper | listEntities is started");
 		

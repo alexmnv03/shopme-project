@@ -15,13 +15,13 @@ public interface UserService {
 
     public User save(User user);
 
-    public boolean isEmailUnique(Integer id, String email);
+    public boolean isEmailUnique(Long id, String email);
 
-    public User get(Integer id) throws UserNotFoundException;
+    public User get(Long id) throws UserNotFoundException;
 
-    public void delete(Integer id) throws UserNotFoundException;
+    public void delete(Long id) throws UserNotFoundException;
 
-    public void updateUserEnabledStatus(Integer id, boolean enabled);
+    public void updateUserEnabledStatus(Long id, boolean enabled);
 
     public void listByPage(int pageNum, PagingAndSortingHelper helper);
 
