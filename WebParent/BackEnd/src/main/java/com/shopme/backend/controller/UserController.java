@@ -7,6 +7,7 @@ import com.shopme.backend.error.UserNotFoundException;
 import com.shopme.backend.paging.PagingAndSortingHelper;
 import com.shopme.backend.paging.PagingAndSortingParam;
 import com.shopme.backend.service.UserService;
+import com.shopme.backend.util.AmazonS3Util;
 import com.shopme.common.entity.Role;
 import com.shopme.common.entity.User;
 import org.slf4j.Logger;
