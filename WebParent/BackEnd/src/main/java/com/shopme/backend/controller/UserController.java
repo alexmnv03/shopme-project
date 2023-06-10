@@ -4,10 +4,14 @@ import java.io.IOException;
 import java.util.List;
 
 import com.shopme.backend.error.UserNotFoundException;
+import com.shopme.backend.exportcsv.UserCsvExporter;
+import com.shopme.backend.exportexcel.UserExcelExporter;
+import com.shopme.backend.exportpdf.UserPdfExporter;
 import com.shopme.backend.paging.PagingAndSortingHelper;
 import com.shopme.backend.paging.PagingAndSortingParam;
 import com.shopme.backend.service.UserService;
 import com.shopme.backend.util.AmazonS3Util;
+import com.shopme.backend.util.DirectUtil;
 import com.shopme.common.entity.Role;
 import com.shopme.common.entity.User;
 import org.slf4j.Logger;
@@ -127,7 +131,7 @@ public class UserController {
     }
 
     @GetMapping("/users/edit/{id}")
-    public String editUser(@PathVariable(name = "id") Integer id,
+    public String editUser(@PathVariable(name = "id") Long id,
                            Model model,
                            RedirectAttributes redirectAttributes) {
 
@@ -158,7 +162,7 @@ public class UserController {
     }
 
     @GetMapping("/users/delete/{id}")
-    public String deleteUser(@PathVariable(name = "id") Integer id,
+    public String deleteUser(@PathVariable(name = "id") Long id,
                              Model model,
                              RedirectAttributes redirectAttributes) {
 
@@ -193,7 +197,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}/enabled/{status}")
-    public String updateUserEnabledStatus(@PathVariable("id") Integer id,
+    public String updateUserEnabledStatus(@PathVariable("id") Long id,
                                           @PathVariable("status") boolean enabled, RedirectAttributes redirectAttributes) {
 
         LOGGER.info("UserController | updateUserEnabledStatus is called");
